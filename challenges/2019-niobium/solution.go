@@ -1,6 +1,7 @@
-package solution
+package main
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 	"sync"
@@ -84,4 +85,36 @@ func countScore(A [][]int, flips []int8, cc chan<- int, wwg *sync.WaitGroup) {
 	wwg.Done()
 
 	cc <- sum
+}
+
+// Solution2 exported second solution
+func Solution2(A [][]int) int {
+	b := whichChanges(A)
+	fmt.Println(b)
+	for i := 0; i < len(A); i++ {
+
+	}
+	return 0
+}
+
+func whichChanges(A [][]int) [][]int {
+	indexes := make([][]int, len(A))
+	for i1, v1 := range A {
+		c0 := make([]int, 0)
+		c1 := make([]int, 0)
+		for i2, v2 := range v1 {
+			if v2 == 0 {
+				c0 = append(c0, i2)
+			} else {
+				c1 = append(c1, i2)
+			}
+		}
+
+		if len(c0) < len(c1) {
+			indexes[i1] = c0
+		} else {
+			indexes[i1] = c1
+		}
+	}
+	return indexes
 }

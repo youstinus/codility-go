@@ -34,19 +34,11 @@ N and M are integers within the range [1..100,000];
 N * M is not greater than 100,000.
 Copyright 2009–2019 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.*/
 
-package solution
+package main
 
 import "fmt"
 
-// you can also use imports, for example:
-// import "fmt"
-// import "os"
-
-// you can write to stdout for debugging purposes, e.g.
-// fmt.Println("this is a debug message")
-
 func main() {
-	// write your code in Go 1.4
 	A := [][]int{{0, 0, 0, 0}, {0, 1, 0, 0}, {1, 0, 1, 1}}
 	result := Solution(A)
 	fmt.Println(result)

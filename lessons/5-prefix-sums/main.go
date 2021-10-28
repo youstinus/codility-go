@@ -12,5 +12,4 @@ func main() {
 	B := []int{0, 1, 0, 1, 1}
 	result1 := PassingCarsSolution(B)
 	fmt.Println(result1)
-
 }
