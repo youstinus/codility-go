@@ -46,8 +46,6 @@ import (
 )
 
 func main() {
-	// Foot 	20 - A | 30 - S
-	// Scooter 	 5 - A | 40 - S
 	fmt.Println(reflect.DeepEqual(Solution([]int{4, 1, 4, 3, 3}, []int{8, 10, 11, 13, 100}), 4))
 	fmt.Println(reflect.DeepEqual(Solution([]int{0, 10, 0}, []int{1, 2, 3}), 3))
 	fmt.Println(reflect.DeepEqual(Solution([]int{0, 1, 0, 1, 1, 1, 0}, []int{1, 2, 3, 4, 5, 6, 7}), 4))
